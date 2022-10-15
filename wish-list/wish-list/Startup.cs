@@ -35,7 +35,7 @@ namespace wish_list
 
             services.AddScoped<IWishListDbContext, WishListDbContext>();
             services.AddScoped<IEntityService<Wish>, EntityService<Wish>>();
-            services.AddScoped<UserService>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

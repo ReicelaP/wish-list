@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WishList.Core.Models;
-using WishList.Services;
+using WishList.Core.Services;
 
 namespace wish_list.Controllers
 {
@@ -8,9 +8,9 @@ namespace wish_list.Controllers
     [ApiController]
     public class UserApiController : ControllerBase
     {
-        private UserService _userService;
+        private IUserService _userService;
 
-        public UserApiController(UserService userService)
+        public UserApiController(IUserService userService)
         {
             _userService = userService;
         }
