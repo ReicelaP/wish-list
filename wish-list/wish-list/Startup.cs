@@ -5,7 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using WishList.Core.Models;
+using WishList.Core.Services;
 using WishList.Data;
+using WishList.Services;
 
 namespace wish_list
 {
@@ -29,6 +32,10 @@ namespace wish_list
 
             services.AddDbContext<WishListDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("wish-list")));
+
+            services.AddScoped<IWishListDbContext, WishListDbContext>();
+            services.AddScoped<IEntityService<Wish>, EntityService<Wish>>();
+            services.AddScoped<UserService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
