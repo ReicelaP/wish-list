@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishList.Core", "WishList.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishList.Data", "WishList.Data\WishList.Data.csproj", "{B975D9E5-01DF-4314-AFD3-47D2A478834F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishList.Services", "WishList.Services\WishList.Services.csproj", "{8172FC98-F03B-4D31-AEF3-C560B7E63E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WishList.Services", "WishList.Services\WishList.Services.csproj", "{8172FC98-F03B-4D31-AEF3-C560B7E63E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishList.Tests", "WishList.Tests\WishList.Tests.csproj", "{418C80D9-3F73-4CEB-A173-E3C0310DD61D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8172FC98-F03B-4D31-AEF3-C560B7E63E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8172FC98-F03B-4D31-AEF3-C560B7E63E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8172FC98-F03B-4D31-AEF3-C560B7E63E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418C80D9-3F73-4CEB-A173-E3C0310DD61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418C80D9-3F73-4CEB-A173-E3C0310DD61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418C80D9-3F73-4CEB-A173-E3C0310DD61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418C80D9-3F73-4CEB-A173-E3C0310DD61D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
