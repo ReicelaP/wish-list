@@ -7,7 +7,7 @@ namespace WishList.Services
     {
         public string GetNames(UserList list)
         {
-            var result = list.Users.Select(u => u.Name).ToArray();
+            var result = list.Users.Select(user => user.Name).ToArray();
             return string.Join(", ", result);
         }
     }
