@@ -49,10 +49,5 @@ namespace WishList.Services
         {
             return _context.Set<T>().ToList();
         }
-
-        public IQueryable<T> Query()
-        {
-            return _context.Set<T>().AsQueryable();
-        }
     }
 }

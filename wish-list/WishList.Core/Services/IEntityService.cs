@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using WishList.Core.Models;
 
 namespace WishList.Core.Services
@@ -11,6 +10,5 @@ namespace WishList.Core.Services
         ServiceResult Delete(T entity);
         T GetById(int id);
         List<T> GetAll();
-        IQueryable<T> Query();
     }
 }
