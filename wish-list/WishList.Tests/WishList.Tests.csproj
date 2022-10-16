@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WishList.Core\WishList.Core.csproj" />
+    <ProjectReference Include="..\WishList.Services\WishList.Services.csproj" />
   </ItemGroup>
 
 </Project>
