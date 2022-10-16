@@ -2,14 +2,14 @@
 
 The application which implements functionality:
 <br/> 
-☆ add wish
+✏️ add wish
 <br/> 
-☆ update wish
+✏️ update wish
 <br/> 
-☆ delete wish
+✏️ delete wish
 <br/> 
-☆ get wish
+✏️ get wish
 <br/> 
-☆ get a list of wishes
+✏️ get a list of wishes
 
 And another root accepts the JSON request of the User List and returns User Names.
