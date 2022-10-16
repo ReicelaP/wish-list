@@ -16,22 +16,28 @@ namespace WishList.Services
             _context = context;
         }
 
-        public void Create(T entity)
+        public ServiceResult Create(T entity)
         {
             _context.Set<T>().Add(entity);
             _context.SaveChanges();
+            
+            return new ServiceResult(true).SetEntity(entity);
         }
 
-        public void Update(T entity)
+        public ServiceResult Update(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
             _context.SaveChanges();
+            
+            return new ServiceResult(true).SetEntity(entity);
         }
 
-        public void Delete(T entity)
+        public ServiceResult Delete(T entity)
         {
             _context.Set<T>().Remove(entity);
             _context.SaveChanges();
+            
+            return new ServiceResult(true);
         }
 
         public T GetById(int id)

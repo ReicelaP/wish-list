@@ -5,7 +5,7 @@ using WishList.Core.Validations;
 
 namespace wish_list.Controllers
 {
-    [Route("api")]
+    [Route("api/wish")]
     [ApiController]
     public class AdminApiController : ControllerBase
     {
@@ -16,7 +16,7 @@ namespace wish_list.Controllers
             _entityService = entityService;
         }
 
-        [Route("wish/{id}")]
+        [Route("{id}")]
         [HttpGet]
         public IActionResult GetWish(int id)
         {
@@ -30,7 +30,6 @@ namespace wish_list.Controllers
             return Ok(wish);
         }
 
-        [Route("wishes")]
         [HttpGet]
         public IActionResult GetWishList(int id)
         {
@@ -39,20 +38,45 @@ namespace wish_list.Controllers
             return Ok(wishes);
         }
 
-        [Route("wish")]
-        [HttpPut]
+        [HttpPost]
         public IActionResult AddWish(Wish wish)
         {
-            if (WishTitleValidator.IsValid(wish))
+            if (!WishTitleValidator.IsValid(wish))
             {
-                _entityService.Create(wish);
+                return BadRequest();
+            }
+
+            var result = _entityService.Create(wish);
+            
+            if (result.Success)
+            {
                 return Created("", wish);
             }
-            
-            return BadRequest();
+
+            return Problem(result.ErrorMessage);
         }
 
-        [Route("wish/delete")]
+        [HttpPut]
+        public IActionResult UpdateWish(int id, Wish wish)
+        {
+            var selectWish = _entityService.GetById(id);
+
+            if (selectWish == null)
+            {
+                return NotFound();
+            }
+
+            selectWish.Title = wish.Title;
+            var result = _entityService.Update(selectWish);
+
+            if (result.Success)
+            {
+                return Ok(wish);
+            }
+
+            return Problem(result.ErrorMessage);
+        }
+
         [HttpDelete]
         public IActionResult DeleteWish(int id)
         {

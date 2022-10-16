@@ -6,9 +6,9 @@ namespace WishList.Core.Services
 {
     public interface IEntityService<T> where T : Entity
     {
-        void Create(T entity);
-        void Update(T entity);
-        void Delete(T entity);
+        ServiceResult Create(T entity);
+        ServiceResult Update(T entity);
+        ServiceResult Delete(T entity);
         T GetById(int id);
         List<T> GetAll();
         IQueryable<T> Query();

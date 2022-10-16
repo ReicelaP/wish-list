@@ -1,6 +1,8 @@
-﻿namespace WishList.Core.Models
+﻿using WishList.Core.Interfaces;
+
+namespace WishList.Core.Models
 {
-    public abstract class Entity
+    public abstract class Entity : IEntity
     {
         public int Id { get; set; }    
     }
