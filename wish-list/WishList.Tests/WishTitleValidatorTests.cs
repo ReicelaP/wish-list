@@ -11,11 +11,11 @@ namespace WishList.Tests
         [TestMethod]
         public void IsValid_HaveValue_ReturnTrue()
         {
-            //Act
+            //Arrange
             var wish = new Wish();
             wish.Title = "Ticket";
 
-            //Assert
+            //Act
             var result = WishTitleValidator.IsValid(wish);
 
             //Assert
@@ -25,11 +25,11 @@ namespace WishList.Tests
         [TestMethod]
         public void IsValid_NullOrEmpty_ReturnFalse()
         {
-            //Act
+            //Arrange
             var wish = new Wish();
             wish.Title = "";
 
-            //Assert
+            //Act
             var result = WishTitleValidator.IsValid(wish);
 
             //Assert
