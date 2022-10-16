@@ -1,4 +1,4 @@
-## Wish List ✅
+## Wish List 📝
 
 The application which implements functionality:
 <br/> 
