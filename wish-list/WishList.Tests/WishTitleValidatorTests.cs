@@ -23,25 +23,11 @@ namespace WishList.Tests
         }
 
         [TestMethod]
-        public void IsValid_EmptyValue_ReturnFalse()
+        public void IsValid_NullOrEmpty_ReturnFalse()
         {
             //Arrange
             var wish = new Wish();
             wish.Title = "";
-
-            //Act
-            var result = WishTitleValidator.IsValid(wish);
-
-            //Assert
-            result.Should().BeFalse();
-        }
-
-        [TestMethod]
-        public void IsValid_NullValue_ReturnFalse()
-        {
-            //Arrange
-            var wish = new Wish();
-            wish.Title = null;
 
             //Act
             var result = WishTitleValidator.IsValid(wish);
